@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Compilation</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        overflow-y: hidden;
+      }
+
+      body::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 5px;
+      }
+
+      body::-webkit-scrollbar-track {
+        background-color: #f0f0f0;
+      }
+
+      .profile-container {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid #333;
+        margin: 0 auto;
+        transition: transform 0.3s;
+      }
+
+      .profile-photo:hover {
+        transform: scale(1.1);
+      }
+
+      .profile-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .bio-box {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        margin: 20px auto 40px;
+        width: 80%;
+        max-width: 800px;
+      }
+
+      .bio-box p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.6em;
+      }
+
+      .project-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .project-box {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+        text-align: center;
+        padding: 40px 30px;
+        text-decoration: none;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .project-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .project-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(204, 230, 255, 0.3);
+        border-radius: 10px;
+        transition: opacity 0.2s;
+        opacity: 0;
+      }
+
+      .project-box:hover::before {
+        opacity: 1;
+      }
+
+      .project-title {
+        font-size: 20px;
+        font-weight: 900;
+        margin-bottom: 10px;
+        color: #007bff;
+      }
+
+      .project-description {
+        font-size: 16px;
+        font-weight: 550;
+        color: #4dabf7;
+      }
+
+      .project1 {
+        background-image: url("assets/calendar.png");
+      }
+
+      .project2 {
+        background-image: url("assets/image-mapping.png");
+      }
+
+      .project3 {
+        background-image: url("assets/login.png");
+      }
+
+      .project4 {
+        background-image: url("assets/form.png");
+      }
+
+      .project5 {
+        background-image: url("assets/tile.png");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile-container">
+      <div class="profile-photo" onmouseover="playHoverSound()">
+        <img src="assets/profile.jpg" alt="Profile Photo" />
+      </div>
+    </div>
+
+    <div class="bio-box">
+      <p>
+        Hello! I'm Jetro Apilado, a passionate developer with experience in
+        various projects. Below you'll find a compilation of some of my work.
+        Feel free to explore!
+      </p>
+    </div>
+
+    <div class="project-container">
+      <a
+        href="https://xpaid.github.io/Calendar/"
+        target="_blank"
+        class="project-box project1"
+        onmouseover="playHoverSound()"
+      >
+        <div class="project-title">Calendar</div>
+        <div class="project-description">A calendar of 2024</div>
+      </a>
+      <a
+        href="https://xpaid.github.io/ImageMapping/"
+        target="_blank"
+        class="project-box project2"
+        onmouseover="playHoverSound()"
+      >
+        <div class="project-title">Image Mapping</div>
+        <div class="project-description">Image Mapping of Region 4-A, PH</div>
+      </a>
+      <a
+        href="https://xpaid.github.io/Login/"
+        target="_blank"
+        class="project-box project3"
+        onmouseover="playHoverSound()"
+      >
+        <div class="project-title">Login-Form</div>
+        <div class="project-description">Login Form example</div>
+      </a>
+      <a
+        href="https://xpaid.github.io/Form/"
+        target="_blank"
+        class="project-box project4"
+        onmouseover="playHoverSound()"
+      >
+        <div class="project-title">Profile Maker Form</div>
+        <div class="project-description">
+          Displays information on a template
+        </div>
+      </a>
+      <a
+        href="https://xpaid.github.io/Sliding-Puzzle/"
+        target="_blank"
+        class="project-box project5"
+        onmouseover="playHoverSound()"
+      >
+        <div class="project-title">A Tile Sliding Puzzle</div>
+        <div class="project-description">A 15-Tile puzzle for your brain</div>
+      </a>
+    </div>
+
+    <audio id="hoverSound">
+      <source src="assets/pspSelect.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script>
+      function playHoverSound() {
+        var sound = document.getElementById("hoverSound");
+        sound.play();
+      }
+    </script>
+  </body>
+</html>
